@@ -8,6 +8,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///todo.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+app.app_context().push()
 
 class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
@@ -29,7 +30,7 @@ def hello_world():
         db.session.commit()
         return redirect("/")
     allTodo = Todo.query.all()
-    return render_template("base.html",allTodo=allTodo)
+    return render_template("index.html",allTodo=allTodo)
 
 # for search
 @app.route('/search', methods=["GET"])
@@ -64,7 +65,7 @@ def delete(sno):
 
 
 if __name__== "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
     
     
     

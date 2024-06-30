@@ -108,7 +108,7 @@ p{
   padding: 5px;
 }
 /* Responsive CSS */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
  .navbar {
     font-size: 24px;
   }

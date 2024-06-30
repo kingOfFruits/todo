@@ -1,0 +1,153 @@
+/* Normal CSS */
+body {
+  background-color: hwb(240 91% 6%);
+}
+.searchBar {
+  display: flex;
+  height: 40px;
+}
+
+.me-2 {
+  width: 600px;
+}
+
+.btn {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #095b67;
+  height: 60px;
+  width: 100%;
+}
+
+.navbar {
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar b {
+  font-size: 40px;
+  color: #f2dbbf;
+}
+
+.navbar:hover {
+  color: white;
+}
+
+.title {
+  color: #08282d;
+  padding: 20px;
+  background-color: #7cbb8d;
+  border: 5px;
+  border-radius: 10px;
+}
+
+.table {
+  padding: 20px;
+  color: #003747;
+  background-color: pink;
+  border: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.update {
+  margin-bottom: 5px;
+}
+
+.items {
+  text-transform: capitalize;
+  color: #14191a;
+  font-weight: 600;
+}
+
+.searchRES {
+  list-style: none;
+  font-weight: 700;
+}
+
+#add {
+  color: white;
+}
+
+.yourTODO {
+  text-align: left;
+  color: #3b3b3b;
+}
+
+.submit {
+  background-color: #026a81;
+}
+
+.search {
+  text-transform: capitalize;
+  border: 5px;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: pink;
+}
+
+.result {
+  font-size: 30px;
+  color: #09242b;
+}
+
+.result b {
+  font-size: 35px;
+  color: white;
+}
+p{ 
+  font-weight: 600;
+  margin-top: 5px;
+  padding: 5px;
+}
+/* Responsive CSS */
+@media screen and (max-width: 768px) {
+ .navbar {
+    font-size: 24px;
+  }
+
+ .navbar b {
+    font-size: 32px;
+  }
+
+ .title,.table {
+    padding: 10px;
+  }
+
+ .searchBar,.me-2 {
+    width: auto;
+  }
+
+ .btn {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+ .navbar {
+    font-size: 18px;
+  }
+
+ .navbar b {
+    font-size: 24px;
+  }
+
+ .title,.table {
+    padding: 5px;
+  }
+
+ .searchBar,.me-2 {
+    width: 100%;
+  }
+
+ .btn {
+    width: auto;
+  }
+}

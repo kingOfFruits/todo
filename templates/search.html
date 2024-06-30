@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block Title %} Search Results {% endblock Title %}
+{% block body %}
+{{super()}}
+<div class="container my-3 search">
+    <h1 class="result">Search Results for <b>"{{ query }}"</b></h1>
+    {% if results|length == 0 %}
+        <div class="alert alert-info" role="alert">
+            No results found for "{{ query }}".
+        </div>
+    {% else %}
+        <ul class="searchRES">
+        {% for result in results %}
+            <li>{{ loop.index }}. title - {{ result.title }} - {{ result.desc }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% endblock body %}
+
+
